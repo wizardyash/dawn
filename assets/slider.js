@@ -20,7 +20,7 @@ class SliderComponent extends HTMLElement {
   }
 
   initPages() {
-    if (!this.sliderItemsToShow.length === 0) return;
+    if (this.sliderItemsToShow.length === 0) return;
     this.slidesPerPage = Math.floor(this.slider.clientWidth / this.sliderItemsToShow[0].clientWidth);
     this.totalPages = this.sliderItemsToShow.length - this.slidesPerPage + 1;
     this.update();
