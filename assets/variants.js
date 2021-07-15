@@ -40,6 +40,7 @@ class VariantSelects extends HTMLElement {
     );
     if (!newMedia) return;
     const parent = newMedia.parentElement;
+    if (parent.firstChild == newMedia) return;
     parent.prepend(newMedia);
     window.setTimeout(() => { parent.scroll(0, 0); parent.scrollIntoView({behavior: "smooth"}); });
   }
