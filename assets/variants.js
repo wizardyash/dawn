@@ -41,7 +41,7 @@ class VariantSelects extends HTMLElement {
     if (!newMedia) return;
     const parent = newMedia.parentElement;
     parent.prepend(newMedia);
-    window.setTimeout(() => { parent.scroll(0, 0) });
+    window.setTimeout(() => { parent.scroll(0, 0); parent.scrollIntoView({behavior: "smooth"}); });
   }
 
   updateURL() {
