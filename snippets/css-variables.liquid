@@ -1,0 +1,75 @@
+{% style %}
+    {{ settings.type_font_d | font_face: font_display: 'swap' }}
+    {{ settings.type_font_1 | font_face: font_display: 'swap' }}
+    {{ settings.type_font_2 | font_face: font_display: 'swap' }}
+    {{ settings.type_font_3 | font_face: font_display: 'swap' }}
+
+    :root {
+        {%- unless settings.full_width -%}
+            --site-viewport: {{ settings.site_viewport | divided_by: 10 | append: 'rem' }};
+        {%- else -%}
+            --site-viewport: 100%;
+        {%- endunless -%}
+
+        --font-default-family: {{ settings.type_font_d.family }}, {{ settings.type_font_d.fallback_families }};
+        --font-default-style: {{ settings.type_font_d.style }};
+        --font-default-weight: {{ settings.type_font_d.weight }};
+
+        --font-style1-family: {{ settings.type_font_1.family }}, {{ settings.type_font_1.fallback_families }};
+        --font-style1-style: {{ settings.type_font_1.style }};
+        --font-style1-weight: {{ settings.type_font_1.weight }};
+
+        --font-style2-family: {{ settings.type_font_2.family }}, {{ settings.type_font_2.fallback_families }};
+        --font-style2-style: {{ settings.type_font_2.style }};
+        --font-style2-weight: {{ settings.type_font_2.weight }};
+
+        --font-style3-family: {{ settings.type_font_3.family }}, {{ settings.type_font_3.fallback_families }};
+        --font-style3-style: {{ settings.type_font_3.style }};
+        --font-style3-weight: {{ settings.type_font_3.weight }};
+
+        --color-base-background: {{ settings.colors_background_d.red }}, {{ settings.colors_background_d.green }}, {{ settings.colors_background_d.blue }};
+        --color-base-text: {{ settings.colors_text_d.red }}, {{ settings.colors_text_d.green }}, {{ settings.colors_text_d.blue }};
+        --color-base-border: {{ settings.colors_border_d.red }}, {{ settings.colors_border_d.green }}, {{ settings.colors_border_d.blue }};
+        --color-base-accent: {{ settings.colors_accent_d.red }}, {{ settings.colors_accent_d.green }}, {{ settings.colors_accent_d.blue }};
+        --color-base-solid-button-labels: {{ settings.colors_solid_button_labels_d.red }}, {{ settings.colors_solid_button_labels_d.green }}, {{ settings.colors_solid_button_labels_d.blue }};
+        --color-base-outline-button-labels: {{ settings.colors_outline_button_labels_d.red }}, {{ settings.colors_outline_button_labels_d.green }}, {{ settings.colors_outline_button_labels_d.blue }};
+
+        --color-style1-background: {{ settings.colors_background_1.red }}, {{ settings.colors_background_1.green }}, {{ settings.colors_background_1.blue }};
+        --color-style1-text: {{ settings.colors_text_1.red }}, {{ settings.colors_text_1.green }}, {{ settings.colors_text_1.blue }};
+        --color-style1-border: {{ settings.colors_border_1.red }}, {{ settings.colors_border_1.green }}, {{ settings.colors_border_1.blue }};
+        --color-style1-accent: {{ settings.colors_accent_1.red }}, {{ settings.colors_accent_1.green }}, {{ settings.colors_accent_1.blue }};
+        --color-style1-solid-button-labels: {{ settings.colors_solid_button_labels_1.red }}, {{ settings.colors_solid_button_labels_1.green }}, {{ settings.colors_solid_button_labels_1.blue }};
+        --color-style1-outline-button-labels: {{ settings.colors_outline_button_labels_1.red }}, {{ settings.colors_outline_button_labels_1.green }}, {{ settings.colors_outline_button_labels_1.blue }};
+
+        --color-style2-background: {{ settings.colors_background_2.red }}, {{ settings.colors_background_2.green }}, {{ settings.colors_background_2.blue }};
+        --color-style2-text: {{ settings.colors_text_2.red }}, {{ settings.colors_text_2.green }}, {{ settings.colors_text_2.blue }};
+        --color-style2-border: {{ settings.colors_border_2.red }}, {{ settings.colors_border_2.green }}, {{ settings.colors_border_2.blue }};
+        --color-style2-accent: {{ settings.colors_accent_2.red }}, {{ settings.colors_accent_2.green }}, {{ settings.colors_accent_2.blue }};
+        --color-style2-solid-button-labels: {{ settings.colors_solid_button_labels_2.red }}, {{ settings.colors_solid_button_labels_2.green }}, {{ settings.colors_solid_button_labels_2.blue }};
+        --color-style2-outline-button-labels: {{ settings.colors_outline_button_labels_2.red }}, {{ settings.colors_outline_button_labels_2.green }}, {{ settings.colors_outline_button_labels_2.blue }};
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    html {
+        box-sizing: border-box;
+        font-size: 62.5%;
+        height: 100%;
+    }
+
+    body {
+        display: block;
+        min-height: 100%;
+        margin: 0;
+        font-size: 1.4rem;
+        letter-spacing: 0.05rem;
+        line-height: 1.8;
+        font-family: var(--font-default-family);
+        font-style: var(--font-default-style);
+        font-weight: var(--font-default-weight);
+    }
+{% endstyle %}

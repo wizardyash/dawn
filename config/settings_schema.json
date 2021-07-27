@@ -1,68 +1,35 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Dawn",
-    "theme_version": "1.1.0",
-    "theme_author": "Shopify",
+    "theme_name": "Shoptimized 2.0",
+    "theme_version": "1.0.0",
+    "theme_author": "Shoptimized",
     "theme_documentation_url": "https://shopify.dev/themes/tools/dawn",
     "theme_support_url": "https://support.shopify.com/"
   },
   {
-    "name": "t:settings_schema.colors.name",
+    "name": "t:settings_schema.general.name",
     "settings": [
       {
         "type": "header",
-        "content": "t:settings_schema.colors.settings.header__1.content"
+        "content": "t:settings_schema.general.settings.header__1.content"
       },
       {
-        "type": "color",
-        "id": "colors_solid_button_labels",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_solid_button_labels.label",
-        "info": "t:settings_schema.colors.settings.colors_solid_button_labels.info"
+        "type": "checkbox",
+        "id": "full_width",
+        "label": "t:settings_schema.general.settings.full_width.label",
+        "default": false
       },
       {
-        "type": "color",
-        "id": "colors_accent_1",
-        "default": "#445958",
-        "label": "t:settings_schema.colors.settings.colors_accent_1.label",
-        "info": "t:settings_schema.colors.settings.colors_accent_1.info"
-      },
-      {
-        "type": "color",
-        "id": "colors_accent_2",
-        "default": "#9D572C",
-        "label": "t:settings_schema.colors.settings.colors_accent_2.label"
-      },
-      {
-        "type": "header",
-        "content": "t:settings_schema.colors.settings.header__2.content"
-      },
-      {
-        "type": "color",
-        "id": "colors_text",
-        "default": "#1A1B18",
-        "label": "t:settings_schema.colors.settings.colors_text.label",
-        "info": "t:settings_schema.colors.settings.colors_text.info"
-      },
-      {
-        "type": "color",
-        "id": "colors_outline_button_labels",
-        "default": "#445958",
-        "label": "t:settings_schema.colors.settings.colors_outline_button_labels.label",
-        "info": "t:settings_schema.colors.settings.colors_outline_button_labels.info"
-      },
-      {
-        "type": "color",
-        "id": "colors_background_1",
-        "default": "#FFFFFF",
-        "label": "t:settings_schema.colors.settings.colors_background_1.label"
-      },
-      {
-        "type": "color",
-        "id": "colors_background_2",
-        "default": "#FAF1E9",
-        "label": "t:settings_schema.colors.settings.colors_background_2.label"
+        "type": "range",
+        "id": "site_viewport",
+        "min": 1200,
+        "max": 1800,
+        "step": 10,
+        "default": 1400,
+        "unit": "t:settings_schema.general.settings.site_viewport.unit",
+        "label": "t:settings_schema.general.settings.site_viewport.label",
+        "info": "t:settings_schema.general.settings.site_viewport.info"
       }
     ]
   },
@@ -71,14 +38,25 @@
     "settings": [
       {
         "type": "header",
+        "content": "t:settings_schema.typography.settings.header__d.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_font_d",
+        "default": "sans-serif",
+        "label": "t:settings_schema.typography.settings.type_font_d.label",
+        "info": "t:settings_schema.typography.settings.type_font_d.info"
+      },
+      {
+        "type": "header",
         "content": "t:settings_schema.typography.settings.header__1.content"
       },
       {
         "type": "font_picker",
-        "id": "type_header_font",
+        "id": "type_font_1",
         "default": "sans-serif",
-        "label": "t:settings_schema.typography.settings.type_header_font.label",
-        "info": "t:settings_schema.typography.settings.type_header_font.info"
+        "label": "t:settings_schema.typography.settings.type_font_1.label",
+        "info": "t:settings_schema.typography.settings.type_font_1.info"
       },
       {
         "type": "header",
@@ -86,83 +64,158 @@
       },
       {
         "type": "font_picker",
-        "id": "type_body_font",
+        "id": "type_font_2",
         "default": "sans-serif",
-        "label": "t:settings_schema.typography.settings.type_body_font.label",
-        "info": "t:settings_schema.typography.settings.type_body_font.info"
+        "label": "t:settings_schema.typography.settings.type_font_2.label",
+        "info": "t:settings_schema.typography.settings.type_font_2.info"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.typography.settings.header__3.content"
+      },
+      {
+        "type": "font_picker",
+        "id": "type_font_3",
+        "default": "sans-serif",
+        "label": "t:settings_schema.typography.settings.type_font_3.label",
+        "info": "t:settings_schema.typography.settings.type_font_3.info"
       }
     ]
   },
   {
-    "name": "t:settings_schema.styles.name",
+    "name": "t:settings_schema.colors.name",
     "settings": [
       {
         "type": "header",
-        "content": "t:settings_schema.styles.settings.header__1.content"
+        "content": "t:settings_schema.colors.settings.header__d.content"
       },
       {
-        "type": "select",
-        "id": "sale_badge_color_scheme",
-        "options": [
-          {
-            "value": "accent-1",
-            "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.options__2.label"
-          },
-          {
-            "value": "accent-2",
-            "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.options__3.label"
-          },
-          {
-            "value": "background-2",
-            "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.options__1.label"
-          }
-        ],
-        "default": "accent-2",
-        "label": "t:settings_schema.styles.settings.sale_badge_color_scheme.label"
+        "type": "color",
+        "id": "colors_background_d",
+        "default": "#FFFFFF",
+        "label": "t:settings_schema.colors.settings.colors_background_d.label"
       },
       {
-        "type": "select",
-        "id": "sold_out_badge_color_scheme",
-        "options": [
-          {
-            "value": "background-1",
-            "label": "t:settings_schema.styles.settings.sold_out_badge_color_scheme.options__1.label"
-          },
-          {
-            "value": "inverse",
-            "label": "t:settings_schema.styles.settings.sold_out_badge_color_scheme.options__2.label"
-          }
-        ],
-        "default": "inverse",
-        "label": "t:settings_schema.styles.settings.sold_out_badge_color_scheme.label"
+        "type": "color",
+        "id": "colors_text_d",
+        "default": "#000000",
+        "label": "t:settings_schema.colors.settings.colors_text_d.label",
+        "info": "t:settings_schema.colors.settings.colors_text_d.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_border_d",
+        "default": "#CCCCCC",
+        "label": "t:settings_schema.colors.settings.colors_border_d.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_accent_d",
+        "default": "#3498DB",
+        "label": "t:settings_schema.colors.settings.colors_accent_d.label",
+        "info": "t:settings_schema.colors.settings.colors_accent_d.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_solid_button_labels_d",
+        "default": "#FFFFFF",
+        "label": "t:settings_schema.colors.settings.colors_solid_button_labels_d.label",
+        "info": "t:settings_schema.colors.settings.colors_solid_button_labels_d.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_outline_button_labels_d",
+        "default": "#000000",
+        "label": "t:settings_schema.colors.settings.colors_outline_button_labels_d.label",
+        "info": "t:settings_schema.colors.settings.colors_outline_button_labels_d.info"
       },
       {
         "type": "header",
-        "content": "t:settings_schema.styles.settings.header__2.content"
+        "content": "t:settings_schema.colors.settings.header__1.content"
       },
       {
-        "type": "select",
-        "id": "accent_icons",
-        "options": [
-          {
-            "value": "accent-1",
-            "label": "t:settings_schema.styles.settings.accent_icons.options__1.label"
-          },
-          {
-            "value": "accent-2",
-            "label": "t:settings_schema.styles.settings.accent_icons.options__2.label"
-          },
-          {
-            "value": "outline-button",
-            "label": "t:settings_schema.styles.settings.accent_icons.options__3.label"
-          },
-          {
-            "value": "text",
-            "label": "t:settings_schema.styles.settings.accent_icons.options__4.label"
-          }
-        ],
-        "default": "text",
-        "label": "t:settings_schema.styles.settings.accent_icons.label"
+        "type": "color",
+        "id": "colors_background_1",
+        "default": "#2C3E50",
+        "label": "t:settings_schema.colors.settings.colors_background_1.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_text_1",
+        "default": "#FFFFFF",
+        "label": "t:settings_schema.colors.settings.colors_text_1.label",
+        "info": "t:settings_schema.colors.settings.colors_text_1.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_border_1",
+        "default": "#FFFFFF",
+        "label": "t:settings_schema.colors.settings.colors_border_1.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_accent_1",
+        "default": "#FFFFFF",
+        "label": "t:settings_schema.colors.settings.colors_accent_1.label",
+        "info": "t:settings_schema.colors.settings.colors_accent_1.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_solid_button_labels_1",
+        "default": "#2C3E50",
+        "label": "t:settings_schema.colors.settings.colors_solid_button_labels_1.label",
+        "info": "t:settings_schema.colors.settings.colors_solid_button_labels_1.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_outline_button_labels_1",
+        "default": "#FFFFFF",
+        "label": "t:settings_schema.colors.settings.colors_outline_button_labels_1.label",
+        "info": "t:settings_schema.colors.settings.colors_outline_button_labels_1.info"
+      },
+      {
+        "type": "header",
+        "content": "t:settings_schema.colors.settings.header__2.content"
+      },
+      {
+        "type": "color",
+        "id": "colors_background_2",
+        "default": "#EEEEEE",
+        "label": "t:settings_schema.colors.settings.colors_background_2.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_text_2",
+        "default": "#000000",
+        "label": "t:settings_schema.colors.settings.colors_text_2.label",
+        "info": "t:settings_schema.colors.settings.colors_text_2.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_border_2",
+        "default": "#000000",
+        "label": "t:settings_schema.colors.settings.colors_border_2.label"
+      },
+      {
+        "type": "color",
+        "id": "colors_accent_2",
+        "default": "#3498DB",
+        "label": "t:settings_schema.colors.settings.colors_accent_2.label",
+        "info": "t:settings_schema.colors.settings.colors_accent_2.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_solid_button_labels_2",
+        "default": "#FFFFFF",
+        "label": "t:settings_schema.colors.settings.colors_solid_button_labels_2.label",
+        "info": "t:settings_schema.colors.settings.colors_solid_button_labels_2.info"
+      },
+      {
+        "type": "color",
+        "id": "colors_outline_button_labels_2",
+        "default": "#000000",
+        "label": "t:settings_schema.colors.settings.colors_outline_button_labels_2.label",
+        "info": "t:settings_schema.colors.settings.colors_outline_button_labels_2.info"
       }
     ]
   },

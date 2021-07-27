@@ -1,104 +1,131 @@
 {
   "settings_schema": {
-    "colors": {
-      "name": "Colors",
+    "general": {
+      "name": "Site Settings",
       "settings": {
-        "colors_solid_button_labels": {
-          "label": "Solid button label",
-          "info": "Used as foreground color on accent colors."
-        },
-        "colors_accent_1": {
-          "label": "Accent 1",
-          "info": "Used for solid button background."
-        },
-        "colors_accent_2": {
-          "label": "Accent 2"
-        },
         "header__1": {
-          "content": "Primary colors"
+          "content": "Site width"
         },
-        "header__2": {
-          "content": "Secondary colors"
+        "full_width": {
+          "label": "Full width"
         },
-        "colors_text": {
-          "label": "Text",
-          "info": "Used as foreground color on background colors."
-        },
-        "colors_outline_button_labels": {
-          "label": "Outline button",
-          "info": "Also used for text links."
-        },
-        "colors_background_1": {
-          "label": "Background 1"
-        },
-        "colors_background_2": {
-          "label": "Background 2"
+        "site_viewport": {
+          "unit": "px",
+          "label": "Site viewport",
+          "info": "Works only when full width option is disabled."
         }
       }
     },
     "typography": {
       "name": "Typography",
       "settings": {
-        "type_header_font": {
+        "header__d": {
+          "content": "Font Style Default"
+        },
+        "type_font_d": {
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https://help.shopify.com/en/manual/online-store/os/store-speed/improving-speed#fonts)"
         },
         "header__1": {
-          "content": "Headings"
+          "content": "Font Style 1"
+        },
+        "type_font_1": {
+          "label": "Font",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https://help.shopify.com/en/manual/online-store/os/store-speed/improving-speed#fonts)"
         },
         "header__2": {
-          "content": "Body"
+          "content": "Font Style 2"
         },
-        "type_body_font": {
+        "type_font_2": {
+          "label": "Font",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https://help.shopify.com/en/manual/online-store/os/store-speed/improving-speed#fonts)"
+        },
+        "header__3": {
+          "content": "Font Style 3"
+        },
+        "type_font_3": {
           "label": "Font",
           "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https://help.shopify.com/en/manual/online-store/os/store-speed/improving-speed#fonts)"
         }
       }
     },
-    "styles": {
-      "name": "Styles",
+    "colors": {
+      "name": "Colors",
       "settings": {
+        "header__d": {
+          "content": "Colors Style Default"
+        },
+        "colors_background_d": {
+          "label": "Background"
+        },
+        "colors_text_d": {
+          "label": "Text",
+          "info": "Used as foreground color on background colors."
+        },
+        "colors_border_d": {
+          "label": "Borders"
+        },
+        "colors_accent_d": {
+          "label": "Accent",
+          "info": "Used for solid button background."
+        },
+        "colors_solid_button_labels_d": {
+          "label": "Solid button label",
+          "info": "Used as foreground color on accent colors."
+        },
+        "colors_outline_button_labels_d": {
+          "label": "Outline button",
+          "info": "Also used for text links."
+        },
         "header__1": {
-          "content": "Badges"
+          "content": "Colors Style 1"
+        },
+        "colors_background_1": {
+          "label": "Background"
+        },
+        "colors_text_1": {
+          "label": "Text",
+          "info": "Used as foreground color on background colors."
+        },
+        "colors_border_1": {
+          "label": "Borders"
+        },
+        "colors_accent_1": {
+          "label": "Accent",
+          "info": "Used for solid button background."
+        },
+        "colors_solid_button_labels_1": {
+          "label": "Solid button label",
+          "info": "Used as foreground color on accent colors."
+        },
+        "colors_outline_button_labels_1": {
+          "label": "Outline button",
+          "info": "Also used for text links."
         },
         "header__2": {
-          "content": "Decorative elements"
+          "content": "Colors Style 2"
         },
-        "sale_badge_color_scheme": {
-          "options__1": {
-            "label": "Background 2"
-          },
-          "options__2": {
-            "label": "Accent 1"
-          },
-          "options__3": {
-            "label": "Accent 2"
-          },
-          "label": "Sale badge color scheme"
+        "colors_background_2": {
+          "label": "Background"
         },
-        "sold_out_badge_color_scheme": {
-          "options__1": {
-            "label": "Background 1"
-          },
-          "options__2": {
-            "label": "Inverse"
-          },
-          "label": "Sold out badge color scheme"
+        "colors_text_2": {
+          "label": "Text",
+          "info": "Used as foreground color on background colors."
         },
-        "accent_icons": {
-          "options__1": {
-            "label": "Accent 1"
-          },
-          "options__2": {
-            "label": "Accent 2"
-          },
-          "options__3": {
-            "label": "Outline button"
-          },
-          "options__4": {
-            "label": "Text"
-          },
-          "label": "Accent icons"
+        "colors_border_2": {
+          "label": "Borders"
+        },
+        "colors_accent_2": {
+          "label": "Accent",
+          "info": "Used for solid button background."
+        },
+        "colors_solid_button_labels_2": {
+          "label": "Solid button label",
+          "info": "Used as foreground color on accent colors."
+        },
+        "colors_outline_button_labels_2": {
+          "label": "Outline button",
+          "info": "Also used for text links."
         }
       }
     },

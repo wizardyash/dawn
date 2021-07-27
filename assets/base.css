@@ -1,133 +1,55 @@
-/* Color custom properties */
-
 :root,
-.color-background-1 {
-  --color-foreground: var(--color-base-text);
-  --color-background: var(--color-base-background-1);
+.color-base-style {
+  --color-background: var(--color-base-background);
+  --color-text: var(--color-base-text);
+  --color-border: var(--color-base-border);
+  --color-accent: var(--color-base-accent);
+  --color-solid-button-labels: var(--color-base-solid-button-labels);
+  --color-outline-button-labels: var(--color-base-outline-button-labels);
 }
 
-.color-background-2 {
-  --color-background: var(--color-base-background-2);
+.color-style1 {
+  --color-background: var(--color-style1-background);
+  --color-text: var(--color-style1-text);
+  --color-border: var(--color-style1-border);
+  --color-accent: var(--color-style1-accent);
+  --color-solid-button-labels: var(--color-style1-solid-button-labels);
+  --color-outline-button-labels: var(--color-style1-outline-button-labels);
 }
 
-.color-inverse {
-  --color-foreground: var(--color-base-background-1);
-  --color-background: var(--color-base-text);
-}
-
-.color-accent-1 {
-  --color-foreground: var(--color-base-solid-button-labels);
-  --color-background: var(--color-base-accent-1);
-}
-
-.color-accent-2 {
-  --color-foreground: var(--color-base-solid-button-labels);
-  --color-background: var(--color-base-accent-2);
-}
-
-.color-foreground-outline-button {
-  --color-foreground: var(--color-base-outline-button-labels);
-}
-
-.color-foreground-accent-1 {
-  --color-foreground: var(--color-base-accent-1);
-}
-
-.color-foreground-accent-2 {
-  --color-foreground: var(--color-base-accent-2);
+.color-style2 {
+  --color-background: var(--color-style2-background);
+  --color-text: var(--color-style2-text);
+  --color-border: var(--color-style2-border);
+  --color-accent: var(--color-style2-accent);
+  --color-solid-button-labels: var(--color-style2-solid-button-labels);
+  --color-outline-button-labels: var(--color-style2-outline-button-labels);
 }
 
 :root,
-.color-background-1 {
-  --color-link: var(--color-base-outline-button-labels);
-  --alpha-link: 0.85;
+.font-base-style {
+  --font-family: var(--font-default-family);
+  --font-style: var(--font-default-style);
+  --font-weight: var(--font-default-weight);
 }
 
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-link: var(--color-foreground);
-  --alpha-link: 0.7;
+.font-style1 {
+  --font-family: var(--font-style1-family);
+  --font-style: var(--font-style1-style);
+  --font-weight: var(--font-style1-weight);
 }
 
-:root,
-.color-background-1 {
-  --color-button: var(--color-base-accent-1);
-  --color-button-text: var(--color-base-solid-button-labels);
-  --alpha-button-background: 1;
-  --alpha-button-border: 1;
+.font-style2 {
+  --font-family: var(--font-style2-family);
+  --font-style: var(--font-style2-style);
+  --font-weight: var(--font-style2-weight);
 }
 
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-button: var(--color-foreground);
-  --color-button-text: var(--color-background);
+.font-style3 {
+  --font-family: var(--font-style3-family);
+  --font-style: var(--font-style3-style);
+  --font-weight: var(--font-style3-weight);
 }
-
-.button--secondary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
-  --alpha-button-background: 0;
-}
-
-.color-background-2 .button--secondary,
-.color-inverse .button--secondary,
-.color-accent-1 .button--secondary,
-.color-accent-2 .button--secondary {
-  --color-button: var(--color-foreground);
-  --color-button-text: var(--color-foreground);
-}
-
-.button--tertiary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
-  --alpha-button-background: 0;
-  --alpha-button-border: 0.2;
-}
-
-.color-background-2 .button--tertiary,
-.color-inverse .button--tertiary,
-.color-accent-1 .button--tertiary,
-.color-accent-2 .button--tertiary {
-  --color-button: var(--color-foreground);
-  --color-button-text: var(--color-foreground);
-}
-
-:root,
-.color-background-1 {
-  --color-badge-background: var(--color-background);
-  --color-badge-border: var(--color-foreground);
-  --alpha-badge-border: 0.1;
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-badge-background: var(--color-background);
-  --color-badge-border: var(--color-background);
-  --alpha-badge-border: 1;
-}
-
-:root,
-.color-background-1,
-.color-background-2 {
-  --color-card-hover: var(--color-base-text);
-}
-
-.color-inverse {
-  --color-card-hover: var(--color-base-background-1);
-}
-
-.color-accent-1,
-.color-accent-2 {
-  --color-card-hover: var(--color-base-solid-button-labels);
-}
-
-/* base */
 
 .no-js:not(html) {
   display: none !important;
@@ -150,44 +72,16 @@ html.no-js .no-js-hidden {
 }
 
 .page-width {
-  max-width: 120rem;
+  width: var(--site-viewport);
+  max-width: 100%;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
 
-.page-width-desktop {
-  padding: 0;
-  margin: 0 auto;
-}
-
 @media screen and (min-width: 750px) {
   .page-width {
-    padding: 0 5rem;
+    padding: 0 3rem;
   }
-
-  .page-width--narrow {
-    padding: 0 9rem;
-  }
-
-  .page-width-desktop {
-    padding: 0;
-  }
-}
-
-@media screen and (min-width: 990px) {
-  .page-width--narrow {
-    max-width: 72.6rem;
-    padding: 0;
-  }
-
-  .page-width-desktop {
-    max-width: 120rem;
-    padding: 0 5rem;
-  }
-}
-
-.element-margin {
-  margin-top: 5rem;
 }
 
 .spaced-section {
@@ -210,40 +104,15 @@ html.no-js .no-js-hidden {
   margin-bottom: 0;
 }
 
-body,
-.color-background-1,
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  color: rgba(var(--color-foreground), 0.75);
-  background-color: rgb(var(--color-background));
-}
-
-.background-secondary {
-  background-color: rgba(var(--color-foreground), 0.04);
-  padding: 4rem 0 5rem;
-}
-
-@media screen and (min-width: 750px) {
-  .background-secondary {
-    padding: 6rem 0 5rem;
-  }
-}
-
-.grid-auto-flow {
-  display: grid;
-  grid-auto-flow: column;
+body {
+  background-color: rgba(var(--color-background), 1);
+  color: rgba(var(--color-text), 1);
+  border-color: rgba(var(--color-border), 1);
 }
 
 .page-margin,
 .shopify-challenge__container {
-  margin: 7rem auto;
-}
-
-.rte-width {
-  max-width: 82rem;
-  margin: 0 auto 2rem;
+  margin: 5rem auto;
 }
 
 .list-unstyled {
@@ -314,16 +183,6 @@ h5,
   line-height: 1.3;
 }
 
-.h0 {
-  font-size: 4rem;
-}
-
-@media only screen and (min-width: 750px) {
-  .h0 {
-    font-size: 5.2rem;
-  }
-}
-
 h1,
 .h1 {
   font-size: 3rem;
@@ -362,8 +221,6 @@ h3,
 
 h4,
 .h4 {
-  font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
   font-size: 1.5rem;
 }
 
@@ -399,47 +256,12 @@ blockquote {
   }
 }
 
-.caption {
-  font-size: 1rem;
-  letter-spacing: 0.07rem;
-  line-height: 1.7;
-}
-
-@media screen and (min-width: 750px) {
-  .caption {
-    font-size: 1.2rem;
-  }
-}
-
-.caption-with-letter-spacing {
-  font-size: 1rem;
-  letter-spacing: 0.13rem;
-  line-height: 1.2;
-  text-transform: uppercase;
-}
-
-.caption-large,
-.customer .field input,
-.customer select,
-.field__input,
-.form__label,
-.select__select {
-  font-size: 1.3rem;
-  line-height: 1.5;
-  letter-spacing: 0.04rem;
-}
-
-.color-foreground {
-  color: rgb(var(--color-foreground));
-}
-
 table:not([class]) {
   table-layout: fixed;
   border-collapse: collapse;
   font-size: 1.4rem;
   border-style: hidden;
   box-shadow: 0 0 0 0.1rem rgba(var(--color-foreground), 0.2);
-  /* draws the table border  */
 }
 
 table:not([class]) td,
@@ -451,16 +273,6 @@ table:not([class]) th {
 @media screen and (max-width: 749px) {
   .small-hide {
     display: none;
-  }
-}
-
-.hidden {
-  display: none !important;
-}
-
-@media screen and (max-width: 749px) {
-  .small-hide {
-    display: none !important;
   }
 }
 
@@ -484,12 +296,16 @@ table:not([class]) th {
   text-align: right;
 }
 
+.left {
+  text-align: left;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
 
 .light {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 a:empty,
@@ -508,62 +324,17 @@ h6:empty {
   display: none;
 }
 
-.link,
-.customer a {
-  cursor: pointer;
-  display: inline-block;
-  border: none;
-  box-shadow: none;
-  text-decoration: underline;
-  text-underline-offset: 0.3rem;
-  color: rgb(var(--color-link));
-  background-color: transparent;
-  font-size: 1.4rem;
-}
-
-.link--text {
-  color: rgb(var(--color-foreground));
-}
-
-.link--text:hover {
-  color: rgba(var(--color-foreground), 0.75);
-}
-
-.link-with-icon {
-  display: inline-flex;
-  font-size: 1.4rem;
-  font-weight: 600;
-  letter-spacing: 0.1rem;
-  text-decoration: none;
-  margin-bottom: 4.5rem;
-  white-space: nowrap;
-}
-
-.link-with-icon .icon {
-  width: 1.5rem;
-  margin-left: 1rem;
-}
-
-.circle-divider::after {
-  content: '\2022';
-  margin: 0 1.3rem 0 1.5rem;
-}
-
-.circle-divider:last-of-type::after {
-  display: none;
-}
-
 hr {
   border: none;
   height: 0.1rem;
   background-color: rgba(var(--color-foreground), 0.2);
   display: block;
-  margin: 5rem 0;
+  margin: 3rem 0;
 }
 
 @media screen and (min-width: 750px) {
   hr {
-    margin: 7rem 0;
+    margin: 5rem 0;
   }
 }
 
@@ -573,254 +344,32 @@ hr {
   display: block;
 }
 
-.placeholder {
-  background-color: rgba(var(--color-foreground), 0.04);
-  color: rgba(var(--color-foreground), 0.55);
-  fill: rgba(var(--color-foreground), 0.55);
-}
-
-details > * {
-  box-sizing: border-box;
-}
-
-.break {
-  word-break: break-word;
-}
-
-.visibility-hidden {
-  visibility: hidden;
-}
-
-@media (prefers-reduced-motion) {
-  .motion-reduce {
-    transition: none !important;
-  }
-}
-
-:root {
-  --duration-short: 100ms;
-  --duration-default: 200ms;
-  --duration-long: 500ms;
-}
-
-.underlined-link {
-  color: rgba(var(--color-link), var(--alpha-link));
-  text-underline-offset: 0.3rem;
-  text-decoration-thickness: 0.1rem;
-  transition: text-decoration-thickness ease 100ms;
-}
-
-.underlined-link:hover {
-  color: rgb(var(--color-link));
-  text-decoration-thickness: 0.2rem;
-}
-
-/* arrow animation */
-.animate-arrow .icon-arrow path {
-  transform: translateX(-0.25rem);
-  transition: transform var(--duration-short) ease;
-}
-
-.animate-arrow:hover .icon-arrow path {
-  transform: translateX(-0.05rem);
-}
-
-/* base-details-summary */
-summary {
-  cursor: pointer;
-  list-style: none;
-  position: relative;
-}
-
-summary .icon-caret {
-  position: absolute;
-  height: 0.6rem;
-  right: 1.5rem;
-  top: calc(50% - 0.35rem);
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-.disclosure-has-popup {
-  position: relative;
-}
-
-.disclosure-has-popup[open] > summary::before {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  display: block;
-  cursor: default;
-  content: ' ';
-  background: transparent;
-}
-
-.disclosure-has-popup > summary::before {
-  display: none;
-}
-
-.disclosure-has-popup[open] > summary + * {
-  z-index: 100;
-}
-
-/* base-focus */
-/*
-  Focus ring - default (with offset)
-*/
-
-*:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-}
-
-/* Fallback - for browsers that don't support :focus-visible, a fallback is set for :focus */
-*:focus {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: 0.3rem;
-  box-shadow: 0 0 0 0.3rem rgb(var(--color-background)),
-    0 0 0.5rem 0.4rem rgba(var(--color-foreground), 0.3);
-}
-
-/* Negate the fallback side-effect for browsers that support :focus-visible */
-*:focus:not(:focus-visible) {
-  outline: 0;
-  box-shadow: none;
-}
-
-/*
-  Focus ring - inset
-*/
-
-.focus-inset:focus-visible {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: -0.2rem;
-  box-shadow: 0 0 0.2rem 0 rgba(var(--color-foreground), 0.3);
-}
-
-/* Fallback */
-.focus-inset:focus {
-  outline: 0.2rem solid rgba(var(--color-foreground), 0.5);
-  outline-offset: -0.2rem;
-  box-shadow: 0 0 0.2rem 0 rgba(var(--color-foreground), 0.3);
-}
-
-.focus-inset:focus:not(:focus-visible) {
-  outline: 0;
-  box-shadow: none;
-}
-
-/*
-  Focus ring - none
-*/
-
-/* Dangerous for a11y - Use with care */
-.focus-none {
-  box-shadow: none !important;
-  outline: 0 !important;
-}
-
-/* component-title */
 .title,
 .title-wrapper-with-link {
-  margin: 3rem 0 2rem;
+  margin: 1.5rem auto;
 }
 
 .title-wrapper-with-link .title {
   margin: 0;
 }
 
-.title-wrapper {
-  margin-bottom: 3rem;
-}
-
 .title-wrapper-with-link {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 1rem;
-  margin: 4rem 0 3rem;
+  justify-content: center;
   flex-wrap: wrap;
-}
-
-.title--primary {
-  margin: 4rem 0;
-}
-
-.title-wrapper--self-padded-tablet-down,
-.title-wrapper--self-padded-mobile {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-@media screen and (min-width: 750px) {
-  .title-wrapper--self-padded-mobile {
-    padding-left: 0;
-    padding-right: 0;
-  }
 }
 
 @media screen and (min-width: 990px) {
   .title,
   .title-wrapper-with-link {
-    margin: 5rem 0 3rem;
-  }
-
-  .title--primary {
-    margin: 2rem 0;
-  }
-
-  .title-wrapper-with-link {
-    align-items: center;
+    margin: 3rem auto;
   }
 
   .title-wrapper-with-link .title {
-    margin-bottom: 0;
-  }
-
-  .title-wrapper--self-padded-tablet-down {
-    padding-left: 0;
-    padding-right: 0;
+    margin: 0;
   }
 }
 
-.title-wrapper-with-link .link-with-icon {
-  margin: 0;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.title-wrapper-with-link .link-with-icon svg {
-  width: 1.5rem;
-}
-
-.title-wrapper-with-link a {
-  color: rgb(var(--color-link));
-  margin-top: 0;
-  flex-shrink: 0;
-}
-
-@media screen and (min-width: 990px) {
-  .title-wrapper-with-link.title-wrapper-with-link--no-heading {
-    display: none;
-  }
-}
-
-.subtitle {
-  font-size: 1.8rem;
-  line-height: 1.8;
-  letter-spacing: 0.05rem;
-  color: rgba(var(--color-foreground), 0.7);
-}
-
-/* component-grid */
 .grid {
   display: flex;
   flex-wrap: wrap;
